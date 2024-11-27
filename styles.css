@@ -1,0 +1,330 @@
+body {
+
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", sans-serif;
+        background-color: #1d2538;
+        padding-bottom: 100px;
+    
+}
+html, body{
+    overflow-x: hidden;
+    font-size: 16px;
+}
+#map-display {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-image: url(Destinations-Abuja-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
+#map-display::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(19, 18, 18, 0.63); 
+    z-index: 1; 
+}
+
+#map-display * {
+    position: relative;
+    z-index: 2; 
+}
+
+#menu-btn {
+    position: absolute;
+    top: 45px;
+    right: 35px;
+    width: 20px;
+    cursor: pointer;
+}
+
+#location {
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    color: #E0E1DC;
+    font-weight: 300;
+}
+
+#search-input{
+    width: 80%;
+    border-radius: 25px ;
+    border: none;
+    background-color: #E0E1DC;
+    font-size: 16px;
+    padding-left: 5%;
+    position: absolute;
+    top: 80%; 
+    display: flex;
+    left: 6.5%;
+    height: 50px;
+}
+#search-input, #search-inputII, #search-input-pop {
+    width: 80%;
+    border-radius: 25px;
+    border: none;
+    background-color: #E0E1DC;
+    font-size: 1rem;
+    padding-left: 5%;
+    height: 50px;
+}
+#search-input::placeholder{
+    color: #7c8da5;
+    font-size: 16px;
+    position: absolute;
+    left: 20px;
+}
+#search-btn {
+    background-color: #E0E1DC;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    border-radius: 0 25px 25px 0;
+}
+
+#search-btn img {
+    width: 20px;
+}
+
+.saved-destinations{
+    background-color: #1d2538;
+    color: #E0E1DC;
+    display: flex;
+    flex-direction: column;
+}
+
+.favorites{
+    margin-top: 20px;
+}
+.home, .Work, .favorites, .second-recent{
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+.home i, .Work i, .favorites i, .second-recent i{
+    margin-left: 25px;
+}
+#home-txt, #work-txt, #fave-txt, #recent-txt{
+    position: absolute;
+    left: 60px;
+    display: grid;
+}
+#home-txt span:first-child, #work-txt span:first-child, #fave-txt span:first-child, #recent-txt span:first-child{
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+#home-txt span:last-child, #work-txt span:last-child, #fave-txt span:last-child, #recent-txt span:last-child {
+    font-size: 12.5px;
+    color: #E0E1DC;
+}
+
+hr {
+    border: none;
+    border-top: 0.5px solid rgba(255, 255, 255, 0.301);
+    width: 100%;
+    margin: 20px auto;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: solid rgba(199, 199, 199, 0.315) 1px;
+    background-color: #1d2538;
+    color: rgba(255, 255, 255, 0.705);
+    height: 70px;
+}
+footer a{
+    width: 150px;
+    text-decoration: none;
+    color: white;
+}
+
+footer img{
+    width: 45px;
+    margin-bottom: 10px;
+}
+#qrpay{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+#direction{
+    color: #7897FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#route{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#qrpay span, #route span, #direction span{
+    font-size: 15px;
+    margin-top: 10px;
+}
+#direction span{
+    color: #7897FF;
+}
+.menudisplay{
+    background-color: black;
+    color: white;
+    position: fixed;
+    right: -100%;
+    top: 0;
+    width: 100vw;
+    z-index: 10;
+    bottom: 0;
+    padding-top: 20px;
+    transition: right 0.3s ease-in-out;
+}
+.menudisplay.active {
+    right: 0;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menudisplay div{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+.menudisplay img{
+    width: 25px;
+}
+.notifications{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+.settings{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.rate-us{
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.help{
+    margin-left: 20px;
+}
+#backbtn{
+    margin-left: 20px;
+    margin-top: 25px;
+}
+.search-popup{
+    position: fixed;
+    bottom: -140%; /* Initially hidden */
+    left: 0;
+    right: 0;
+    height: 80vh;
+    background-color:#040a18;
+    color: white;
+    transition: bottom 0.4s ease; /* Smooth slide effect */
+    z-index: 500;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Additional styles for transformed state */
+#search-input.transformed {
+    position: absolute;
+    z-index: 1000; /* Above other elements */
+   top: 30vh;
+}
+#search-input-pop, .favorites-pop{
+    position: sticky;
+    top: 5%;
+    left: 6.5%;
+    width: 80%;
+    border-radius: 25px;
+    border: none;
+    background-color: #E0E1DC;
+    font-size: 16px;
+    padding-left: 5%;
+    height: 40px;
+}
+.close-indicator, .close-indicator-directions {
+    width: 40px;
+    height: 5px;
+    background-color: gray;
+    border-radius: 5px;
+    margin: 10px auto;
+    cursor: grab;
+  }
+  .directions-div{
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: -140%; /* Start off-screen */
+        height: 80vh;
+        background-color: #040a18;
+        color: white;
+        transition: bottom 0.4s ease; /* Smooth slide effect */
+        z-index: 500;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        display: flex;
+        flex-direction: column;
+  }
+  .detailed-direction{
+    margin-top: 100px;
+    margin-left: 6.5%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .detailed-direction span{
+    display: flex;
+  }
+  #search-inputII{
+    width: 80%;
+    border-radius: 25px ;
+    border: none;
+    background-color: #E0E1DC;
+    font-size: 16px;
+    padding-left: 5%;
+    position: absolute;
+    top: 10vh;
+    display: flex;
+    left: 6.5%;
+    height: 40px;
+  }

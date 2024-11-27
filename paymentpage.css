@@ -1,0 +1,63 @@
+body{
+  background-color:#1d2538;
+  padding-top: 150px;
+}
+
+ img{
+  width: 90px;
+}
+.amounttab{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 10%;
+}
+.amounttab input{
+  height: 30px;
+  margin-bottom: 10px;
+}
+.amounttab button{
+  height: 30px;
+  background-color: rgb(236, 160, 17);
+  border: none;
+  color: white;
+}
+.bal{
+  font-size: 12px;
+  position: absolute;
+  right: 0;
+  top: -15px;
+  color: white;
+}
+select{
+  width: 100%;
+  background-color: #1d2538;
+  color: whitesmoke;
+  height: 40px;
+}
+
+input{
+  background-color: #1d2538;
+  border: solid rgb(146, 145, 145) 1px;
+  margin-top:5px ;
+  text-align: right;
+  direction: rtl;
+  padding-right: 15px;
+  color: whitesmoke;
+}
+input::placeholder{
+  color: whitesmoke;
+}
+.ngn{
+  position: absolute;
+  bottom: 47px;
+  left: 3px;
+  color: whitesmoke;
+}
+.back-arrow{
+  width: 30px;
+  position: absolute;
+  top: 15px;
+  left: 5px;
+}

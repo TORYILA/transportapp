@@ -1,0 +1,262 @@
+body {
+    margin: 0; 
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: #1d2538;
+    padding-bottom: 100px;
+    
+}
+html, body{
+    overflow-x: hidden;
+}
+#maplayout{
+    background-image: url(overhead\ map.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 300px;
+}
+#input-div{
+    display: flex;
+    position: absolute;
+    top: 45px;
+    width: 100%;
+    height: 50px;
+    left: 4%;
+}
+#input-div button{
+    background-color: #1d2538;
+    border: none;
+    border-radius:25px 0 0 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    
+}
+#input-div button i{
+    margin-top: 5px;
+}
+
+#input-div input{
+    border-radius:0 25px 25px 0;
+    border: none;
+    padding-left: 5px;
+    width: 80%;
+    background-color: #1d2538;
+    color: white;
+}
+#input-div input::placeholder{
+    color: #E0E1DC;
+    font-size: 13px;
+    
+}
+.buses{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 100px;
+    left: 5%;
+    border-radius: 50%;
+    background-color: rgba(0, 128, 0, 0.87);
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+}
+.buses img{
+    width: 20px;
+}
+.saved-destinations{
+    background-color: #1d2538;
+    color: #E0E1DC;
+    display: flex;
+    flex-direction: column;
+}
+#faveicon, #recent-icon{
+    width: 18px;
+    margin-left: 20px;
+}
+
+.favorites, .first-recent, .second-recent{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+#fave-txt, #recent-txt{
+    position: absolute;
+    left: 50px;
+    display: grid;
+    height: 40px;
+}
+#fave-txt span:first-child, #recent-txt span:first-child{
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+#fave-txt span:last-child, #recent-txt span:last-child {
+    font-size: 12.5px;
+    color: #E0E1DC;
+}
+
+.rightdisplay{
+    display: flex;
+    align-items: center;
+    color: #E0E1DC;
+}
+.rightdisplay p{
+    margin: 0;
+}
+.rightdisplay img{
+    margin-right: 20px;
+    margin-left: 20px;
+    
+}
+.bustops{
+    background-color: #040a18;
+    display: flex;
+    flex-direction: column;
+    padding-left: 19px;
+    justify-content: space-between;
+    height: 120px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.bustops span{
+    margin-left: 35px;
+}
+.transition-container {
+    overflow: hidden;
+    height: 0;
+    transition: height 0.3s ease;
+}
+
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 0;
+}
+
+.bustops span img{
+    margin-right: 15px;
+}
+hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.301);
+    width: 100%;
+    margin: 0;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: solid rgba(199, 199, 199, 0.315) 1px;
+    background-color: #1d2538;
+    color: rgba(255, 255, 255, 0.705);
+    height: 70px;
+}
+
+
+footer a{
+    width: 150px;
+    text-decoration: none;
+    color: white;
+}
+
+#qrpay{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+#direction{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#route{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:#7897FF ;
+}
+#qrpay span, #route span, #direction span{
+    font-size: 15px;
+    margin-top: 10px;
+}
+#route span{
+    color: #7897FF;
+}
+.stop-popup {
+    position: fixed;
+    bottom: -140%; /* Initially hidden */
+   
+    left: 0;
+    right: 0;
+    height: 80vh;
+    
+    background-color:#040a18;
+    color: white;
+    transition: bottom 0.4s ease; /* Smooth slide effect */
+    z-index: 1000;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+
+  .stop-popup img {
+    width: 35px;
+  }
+.stop-popup h3{
+    margin-left: 20px;
+}
+  .busess {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .busess div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .bussec {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+
+  .close-indicator {
+    width: 40px;
+    height: 5px;
+    background-color: gray;
+    border-radius: 5px;
+    margin: 10px auto;
+    cursor: grab;
+  }
+  .track{
+    position: absolute;
+    left: 10px;
+    top: -4px;
+    color: white;
+  }
+  #icons{
+    padding-left: 20px;
+    
+  }

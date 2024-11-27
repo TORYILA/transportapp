@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Transport</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="map-display">
+        <p id="location">Abuja, Nigeria</p>
+        <img id="menu-btn" src="menu-button (1).png" alt="">
+        <input placeholder="Where do you want to go?" id="search-input" type="text">
+    </nav>
+
+    <div class="saved-destinations">
+        <div class="favorites">
+            <i class="fa-solid fa-star fa-lg" style="color: #ffffff;"></i>
+            <div id="fave-txt">
+                <span>Favorites</span>
+                <span>Tap to set</span>
+            </div>
+        </div>
+        <hr>
+        <div class="home">
+            <i class="fa-solid fa-house fa-lg" style="color: #ffffff;"></i>
+            <div id="home-txt">
+                <span>Home</span>
+                <span>Tap to set</span>
+            </div>
+        </div>
+        <hr>
+        <div class="Work">
+            <i class="fa-solid fa-suitcase fa-lg" style="color: #ffffff;"></i>
+            <div id="work-txt">
+                <span>Work</span>
+                <span>Tap to set</span>
+            </div>
+        </div>
+        <hr>
+        <div class="recents">
+            <div class="second-recent">
+                <i class="fa-solid fa-clock fa-lg" style="color: #ffffff;"></i>
+                <div id="recent-txt">
+                    <span>Instanbul Restaurant</span>
+                    <span>Jabi</span>
+                </div>
+            </div>
+            <hr>
+            <div class="second-recent">
+                <i class="fa-solid fa-clock fa-lg" style="color: #ffffff;"></i>
+                <div id="recent-txt">
+                    <span>No 9, Kingdom Estate, Opposite Apo Mechanic Village</span>
+                    <span>Apo</span>
+                </div>
+            </div>
+            <hr>
+            <div class="second-recent">
+                <i class="fa-solid fa-clock fa-lg" style="color: #ffffff;"></i>
+                <div id="recent-txt">
+                    <span>Federal Inland Revenue Service</span>
+                    <span>Wuse</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>    
+        <a id="direction"><i class="fa-solid fa-route fa-2xl" style="color: #7897ff;"></i></a>
+        <a href="stations.html" id="route"><i class="fa-solid fa-sign-hanging fa-2xl" style="color: #ffffff;"></i></a>
+        <a href="qrpage.html" id="qrpay"><i class="fa-sharp fa-solid fa-qrcode fa-2xl" style="color: #ffffff;"></i></a>
+    </footer>
+
+    <div class="overlay"></div>
+    <div class="menudisplay">
+        <img id="backbtn" src="menuicons/left-chevron.png" alt="">
+        <div class="notifications"><img src="menuicons/bell.png" alt=""><span>Notification centre</span></div>
+        <hr>
+        <div class="settings"><img src="menuicons/settings.png" alt=""><span>Settings</span></div>
+        <div class="rate-us"><img src="menuicons/star.png" alt=""><span>Rate Us</span></div>
+        <div class="help"><img src="menuicons/question.png" alt=""><span>Help and Support</span></div>
+        <hr>
+        <div class="about"><img src="" alt=""><span>About</span></div>
+    </div>
+
+    <div class="search-popup">
+        <div class="close-indicator"></div>
+        <input placeholder="Current location" id="search-input-pop" type="text">
+    </div>
+
+    <div class="directions-div">
+        <div class="close-indicator-directions"></div>
+        <input placeholder="Current location" type="text" class="favorites-pop">
+        <input placeholder="Where do you want to go?" id="search-inputII" type="text">
+        
+        <div class="detailed-direction">
+            <span><img src="bullet.png" alt="">Enter bus 17 at Idu Bus stop</span>
+            <span><img src="bullet.png" alt="">Drop at Airport Junction bus stop</span>
+            <span><img src="bullet.png" alt="">Enter Bus 35 at NGIS Bus stop</span>
+            <span><img src="bullet.png" alt="">Drop at Jabi Lake Bus stop</span>
+            <span><img src="bullet.png" alt="">1 Minute walk to Instanbul Restaurant</span>
+        </div>
+    </div>
+
+</body>
+<script defer src="transition.js"></script>
+<script defer src="searchpopup.js"></script>
+<script defer src="directionspopup.js"></script>
+</html>
