@@ -153,22 +153,21 @@ footer{
 footer a{
     width: 150px;
     text-decoration: none;
-    color: white;
 }
 
-footer img{
+footer i{
     width: 45px;
     margin-bottom: 10px;
 }
 #qrpay{
-
     display: flex;
     flex-direction: column;
     align-items: center;
-
+}
+.emergency{
+    color: red;
 }
 #direction{
-    color: #7897FF;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -182,9 +181,7 @@ footer img{
     font-size: 15px;
     margin-top: 10px;
 }
-#direction span{
-    color: #7897FF;
-}
+
 .menudisplay{
     background-color: black;
     color: white;
