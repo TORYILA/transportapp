@@ -167,20 +167,22 @@ footer{
     color: rgba(255, 255, 255, 0.705);
     height: 70px;
 }
-
-
 footer a{
     width: 150px;
     text-decoration: none;
-    color: white;
 }
 
+footer i{
+    width: 45px;
+    margin-bottom: 10px;
+}
 #qrpay{
-
     display: flex;
     flex-direction: column;
     align-items: center;
-
+}
+.emergency{
+    color: red;
 }
 #direction{
     display: flex;
@@ -191,15 +193,12 @@ footer a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    color:#7897FF ;
 }
 #qrpay span, #route span, #direction span{
     font-size: 15px;
     margin-top: 10px;
 }
-#route span{
-    color: #7897FF;
-}
+
 .stop-popup {
     position: fixed;
     bottom: -140%; /* Initially hidden */
